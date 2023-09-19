@@ -23,6 +23,7 @@ urlpatterns = [
 
     # api
     path('api/v1/accounts/', include('accounts.api.urls', namespace='accounts')),
+    path('api/v1/posts/', include('post.api.urls', namespace='posts')),
 
     # jwt
     path('api/v1/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
