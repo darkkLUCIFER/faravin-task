@@ -32,10 +32,9 @@ class PostView(APIView):
     permission_classes = [IsCreatorOrReadOnly]
 
     def get(self, request):
-        user = self.request.user
         post_id = self.request.query_params.get('post_id')
         try:
-            post = Post.objects.get(id=post_id, user=user)
+            post = Post.objects.get(id=post_id)
         except Post.DoesNotExist:
             post = None
         if post:
