@@ -22,6 +22,6 @@
 
 
 ## Technologies Used
-. Django
-. Drf
-. Jwt
+1. Django
+2. Drf
+3. Jwt
